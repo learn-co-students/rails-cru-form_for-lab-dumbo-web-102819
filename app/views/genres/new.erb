@@ -1,0 +1,8 @@
+<h1>
+    <%= @s == 'new' ? "Create Genre!" : "Edit Genre!" %>
+</h1>
+
+<%= form_for @genre do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit (@s == 'new' ? 'Create Genre' : 'Update Genre') %>
+<% end%>
